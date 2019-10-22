@@ -7,10 +7,12 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    if @student.active == true
-      puts "This student is currently active."
-    else
-      puts "This student is currently inactive."
+  end
+
+  def activate
+    @student = Student.find(params[:id])
+    if @student.active == false
+      @student.active = true
     end
   end
 
