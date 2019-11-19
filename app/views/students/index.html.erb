@@ -1,5 +1,6 @@
+<h1>School of Rock Student List</h1>
 <ul>
   <% @students.each do |student| %>
-    <li><%= link_to student.to_s, student_path(student) %></li>
+    <li style="list-style: none"><i class="fa fa-lg <%= student.active ? 'fa-smile-o' : 'fa-frown-o' %>" style="color: <%= student.active ? 'green' : 'red' %>"></i>&nbsp;&nbsp;<%= link_to student.to_s, student_path(student) %></li><br>
   <% end %>
 </ul>
