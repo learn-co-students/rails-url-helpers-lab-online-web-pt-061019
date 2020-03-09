@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # creating dynamic route only using 'index' = '/students' and 'show' = '/students/:id'
 
   get '/students/:id/activate', to: 'students#activate', as: 'activate_student' 
-  # creating 'a href' for directory called 'students' and the link is called 'activate_student'
+  # customize the name for method or path 'as: activate_student'
 end
